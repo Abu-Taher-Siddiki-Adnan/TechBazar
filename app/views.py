@@ -296,9 +296,7 @@ class checkout(View):
         return render(request, 'app/checkout.html', locals())
     
 
-
-from .models import Payment
-
+@login_required
 def payment_view(request):
     if not request.user.is_authenticated:
         messages.error(request, 'You need to be logged in to proceed with payment.')
@@ -362,6 +360,7 @@ def payment_view(request):
 
 
 @csrf_exempt
+
 def payment_success(request):
     transaction_id = request.GET.get('tran_id')  # Retrieve transaction ID from URL
 
