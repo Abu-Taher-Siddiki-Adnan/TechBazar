@@ -1,0 +1,130 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block banner-slider %}
+<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'app/images/banner/b1.png'%}" class="d-block w-100" alt="banner image">
+    </div>
+    <div class="carousel-item active">
+      <img src="{% static 'app/images/banner/b2.png'%}" class="d-block w-100" alt="banner image">
+    </div>
+    <div class="carousel-item active">
+      <img src="{% static 'app/images/banner/b3.png'%}" class="d-block w-100" alt="banner image">
+    </div>
+    <div class="carousel-item active">
+      <img src="{% static 'app/images/banner/b4.png'%}" class="d-block w-100" alt="banner image">
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<hr>
+{% endblock banner-slider %}
+
+<br><br><br>
+{% block information %}
+<div class="container">
+  <div class="row text-white text-center p-5 border-bottom shadow bg-success">
+    <h1>Products</h1>
+    <small class="fs-5">
+      TechBazaar is your ultimate destination for cutting-edge technology and innovative gadgets. From the latest electronics to must-have accessories, we offer a carefully curated selection of high-quality tech products to enhance your lifestyle. Whether you’re a tech enthusiast, a gamer, or someone seeking smart solutions, TechBazaar delivers exceptional value, seamless shopping, and expert support. Experience the future of technology, today.
+    </small>
+  </div>
+</div>
+{% endblock information %}
+{% block main-content %}
+<br><br>
+<div class="container">
+  <h1 class="text-center">Our Products</h1> <br> <br>
+  <div class="row container ">
+    <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duraion="1s" data-wow-delay="0.6s"
+      style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+      <div class="goodnesssec buttermilk smbg">
+        <a href="{% url 'category' 'Mo' %}">
+          <div class="goodnessseccont text-center">
+            <img src="{% static 'app/images/product/Iphone16.jpeg'%}" alt="Mobile"
+              class="img-renponsive center-block">
+            <p class="mlkpro">Mobile</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duraion="1s" data-wow-delay="0.6s"
+      style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+      <div class="goodnesssec buttermilk smbg">
+        <a href="{% url 'category' 'La' %}">
+          <div class="goodnessseccont text-center">
+            <img src="{% static 'app/images/product/Laptop.webp'%}" alt="Laptop"
+              class="img-renponsive center-block">
+            <p class="mlkpro">Laptop</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duraion="1s" data-wow-delay="0.6s"
+      style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+      <div class="goodnesssec buttermilk smbg">
+        <a href="{% url 'category' 'Ta' %}">
+          <div class="goodnessseccont text-center">
+            <img src="{% static 'app/images/product/Tab.webp'%}" alt="Honor Magic 6 Pro"
+              class="img-renponsive center-block">
+            <p class="mlkpro">Tablet</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <br><br>
+    <div class="row container ">
+    <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duraion="1s" data-wow-delay="0.6s"
+      style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+      <div class="goodnesssec buttermilk smbg">
+        <a href="{% url 'category' 'Ac' %}">
+          <div class="goodnessseccont text-center">
+            <img src="{% static 'app/images/product/Headphone.jpg'%}" alt="Accessories"
+              class="img-renponsive center-block">
+            <p class="mlkpro">Accessories</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duraion="1s" data-wow-delay="0.6s"
+      style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+      <div class="goodnesssec buttermilk smbg">
+        <a href="{% url 'category' 'TV' %}">
+          <div class="goodnessseccont text-center">
+            <img src="{% static 'app/images/product/TV.jpg'%}" alt="TV"
+              class="img-renponsive center-block">
+            <p class="mlkpro">TV</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duraion="1s" data-wow-delay="0.6s"
+      style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+      <div class="goodnesssec buttermilk smbg">
+        <a href="{% url 'category' 'App' %}">
+          <div class="goodnessseccont text-center">
+            <img src="{% static 'app/images/product/heater.jpg'%}" alt="Honor Magic 6 Pro"
+              class="img-renponsive center-block">
+            <p class="mlkpro">Appliance</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+{% endblock main-content %}
